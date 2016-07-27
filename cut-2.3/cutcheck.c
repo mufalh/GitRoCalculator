@@ -383,7 +383,6 @@ void __cut_end( char *filename, int lineNumber, char *closingFrame )
 
 
 extern void __CUT_BRINGUP__Pass( void );
-extern void __CUT__TestA( void );
 extern void __CUT_TAKEDOWN__Pass( void );
 
 
@@ -397,9 +396,6 @@ int main( int argc, char *argv[] )
   cut_start( "group-Pass", __CUT_TAKEDOWN__Pass );
   __CUT_BRINGUP__Pass();
   cut_check_errors();
-    cut_start( "TestA", 0 );
-    __CUT__TestA();
-    cut_end( "TestA" );
   cut_end( "group-Pass" );
   __CUT_TAKEDOWN__Pass();
 

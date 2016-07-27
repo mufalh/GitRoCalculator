@@ -1,13 +1,15 @@
 #include "cut.h"
 #include <stdio.h>
+#include "Methods.c"
 
 void __CUT_BRINGUP__Pass( void )
 {
 }
 
-void __CUT__TestA( void )
+void AddTwoRomanNumeralsTest( void )
 {
-  ASSERT( 1 == 1, "One should always be equal to one." );
+//	ASSERT_EQUALS("IV", addRn("I", "III"));
+  ASSERT(strcmp(addRn("I", "III"),"IV") == 0, "One should always be equal to one." );
 }
 
 
