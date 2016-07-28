@@ -26,6 +26,7 @@ void __CUT__TestA( void ) //AddTwoRomanNumeralsTest
 void __CUT__TestB( void ) //AddTwoRomanNumeralsTest
 {
 	ASSERT(strcmp(subRn("III", "I"),"II") == 0, "Successful Test" );
+	ASSERT(strcmp(subRn("XX", "XI"),"IX") == 0, "Successful Test" );
 
 }
 
