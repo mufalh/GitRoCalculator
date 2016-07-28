@@ -13,11 +13,12 @@ void __CUT_BRINGUP__Pass( void )
 
 }
 
-void __CUT__TestA( void )
+void __CUT__TestA( void ) //AddTwoRomanNumeralsTest
 {
 	ASSERT(strcmp(addRn("I", "III"),"IV") == 0, "Successful Test" );
 	ASSERT(strcmp(addRn("XI", "XX"),"XXXI") == 0, "Successful Test" );
 	ASSERT(strcmp(addRn("XM", "VX"),"CMXCV") == 0, "Successful Test" );
+	ASSERT(strcmp(addRn("MM", "DCX"),"MMDCX") == 0, "Successful Test" );
 
 }
 
