@@ -8,6 +8,7 @@ long int RomToDec(char roman_Number[10]);
 char * dec2romanstr(int num);
 char * addRn(char Number1[10], char Number2[10]);
 char * subRn(char Number1[10], char Number2[10]);
+int TestRn(char Number[10]);
 
 void __CUT_BRINGUP__Pass( void )
 {
@@ -29,6 +30,21 @@ void __CUT__TestB( void ) //SubtractTwoRomanNumeralsTest
 	ASSERT(strcmp(subRn("XX", "XI"),"IX") == 0, "Successful Test" );
 	ASSERT(strcmp(subRn("XM", "VX"),"CMLXXXV") == 0, "Successful Test" );
 	ASSERT(strcmp(subRn("MM", "DCX"),"MCCCXC") == 0, "Successful Test" );
+
+}
+
+void __CUT__TestC( void ) //CheckIfLettersAreRomanNumeralTest
+{
+	ASSERT(1 == TestRn("IV"), "Successful Test" );
+	ASSERT(1 == TestRn("XI"), "Successful Test" );
+//	ASSERT(0 == TestRn("ABC"), "Successful Test" );
+//	ASSERT(0 == TestRn("123"), "Successful Test" );
+//	ASSERT(0 == TestRn("$#%&"), "Successful Test" );
+
+}
+
+void __CUT__TestD( void ) //CheckIfLettersAreRomanNumeralTest
+{
 
 }
 
@@ -78,6 +94,23 @@ char * subRn(char Number1[10], char Number2[10])
 			    		}
 					}
 /////////////////////////////////////////////
+
+/////////////////////////////////////////////
+int TestRn(char Number[10])
+					    {
+						long int DecNumber;
+				        DecNumber=RomToDec(Number);
+				    	if (DecNumber==0)
+				    	{
+				    		return 0;
+				    	}
+				    	else
+				    	{
+				    		return 1;
+				    	}
+					    }
+/////////////////////////////////////////////
+
 
 ////////////////////////////////////////
 char * dec2romanstr(int num){
