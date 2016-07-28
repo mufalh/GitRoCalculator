@@ -28,6 +28,7 @@ void __CUT__TestB( void ) //SubtractTwoRomanNumeralsTest
 	ASSERT(strcmp(subRn("III", "I"),"II") == 0, "Successful Test" );
 	ASSERT(strcmp(subRn("XX", "XI"),"IX") == 0, "Successful Test" );
 	ASSERT(strcmp(subRn("XM", "VX"),"CMLXXXV") == 0, "Successful Test" );
+	ASSERT(strcmp(subRn("MM", "DCX"),"MCCCXC") == 0, "Successful Test" );
 
 }
 
