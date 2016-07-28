@@ -43,9 +43,10 @@ void __CUT__TestC( void ) //CheckIfLettersAreRomanNumeralTest
 
 }
 
-void __CUT__TestD( void ) //CheckIfLettersAreRomanNumeralTest
+void __CUT__TestD( void ) //CheckIfTheResultIsEqualOrLessThanZeroTest
 {
-
+//	ASSERT(strcmp(subRn("IV", "IV"),"Overflow") == 0, "Successful Test" );
+//	ASSERT(strcmp(subRn("I", "III"),"Overflow") == 0, "Successful Test" );
 }
 
 void __CUT_TAKEDOWN__Pass( void )
