@@ -17,6 +17,7 @@ void __CUT__TestA( void )
 {
 	ASSERT(strcmp(addRn("I", "III"),"IV") == 0, "Successful Test" );
 	ASSERT(strcmp(addRn("XI", "XX"),"XXXI") == 0, "Successful Test" );
+	ASSERT(strcmp(addRn("XM", "VX"),"CMXCV") == 0, "Successful Test" );
 
 }
 
