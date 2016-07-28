@@ -7,6 +7,7 @@ int digitValue(char);
 long int RomToDec(char roman_Number[10]);
 char * dec2romanstr(int num);
 char * addRn(char Number1[10], char Number2[10]);
+char * subRn(char Number1[10], char Number2[10]);
 
 void __CUT_BRINGUP__Pass( void )
 {
@@ -22,6 +23,11 @@ void __CUT__TestA( void ) //AddTwoRomanNumeralsTest
 
 }
 
+void __CUT__TestB( void ) //AddTwoRomanNumeralsTest
+{
+	ASSERT(strcmp(subRn("III", "I"),"II") == 0, "Successful Test" );
+
+}
 
 void __CUT_TAKEDOWN__Pass( void )
 {
@@ -45,8 +51,30 @@ char * addRn(char Number1[10], char Number2[10])
 		    	ReChar=dec2romanstr(ReDec);
 		    	return ReChar;
 				}
-////////////////////////////////////////
-
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+char * subRn(char Number1[10], char Number2[10])
+				    {
+					long int DecNumber1;
+			    	long int DecNumber2;
+			    	long int ReDec;
+			    	char * ReChar;
+			        DecNumber1=RomToDec(Number1);
+			    	DecNumber2=RomToDec(Number2);
+			    	// subtraction
+			    	ReDec=DecNumber1-DecNumber2;
+			    	if((ReDec) <=0)
+			    		{
+			    			puts("Roman Numerals cannot express zero or negative numbers.");
+			    			return "Overflow";
+			    		}
+			    		else
+			    		{
+			    			ReChar=dec2romanstr(ReDec);
+			    			return ReChar;
+			    		}
+					}
+/////////////////////////////////////////////
 
 ////////////////////////////////////////
 char * dec2romanstr(int num){
